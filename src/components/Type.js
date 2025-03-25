@@ -64,7 +64,7 @@ function Type() {
 
 
     // Fetching BMI data from the Model
-   const fetchBMIData = async (gender, height, weight) => {
+   const fetchBMIData = async (age,gender, height, weight) => {
   try {
     const response = await fetch("http://localhost:5000/bmi", {
       method: "POST",
