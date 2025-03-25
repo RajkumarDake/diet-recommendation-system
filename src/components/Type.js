@@ -61,25 +61,81 @@ function Type() {
       }
     };
 
-    const fetchFoodAvoidance = async (disease) => {
-      try {
-        const response = await fetch("http://localhost:5000/food", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ disease }),
-        });
 
-        if (!response.ok) {
-          console.error(`Error fetching food avoidance: HTTP status ${response.status}`);
-          return [{ food_entity: "None", sentence: "No data" }];
-        }
 
-        return await response.json();
-      } catch (error) {
-        console.error("Error fetching food avoidance:", error);
-        return [{ food_entity: "None", sentence: "No data" }];
-      }
-    };
+    // Fetching BMI data from the Model
+   const fetchBMIData = async (gender, height, weight) => {
+  try {
+    const response = await fetch("http://localhost:5000/bmi", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ gender, height, weight }),
+    });
+
+    if (!response.ok) {
+      console.error(`Error fetching BMI data: HTTP status ${response.status}`);
+      return { bmi: null, recommendation: "No data available" };
+    }
+
+    const result = await response.json();
+    console.log("BMI Response (for demo):", result); // Log to show it’s for presentation
+    return result; // Model should process gender, height, weight, but currently just returns response
+  } catch (error) {
+    console.error("Error fetching BMI data:", error);
+    return { bmi: null, recommendation: "No data available" };
+  }
+};
+
+// Fetching Stress data from the Model
+const fetchStressData = async (gender, height, weight, wakeupTime, sleepTime, maritalStatus) => {
+  try {
+    const response = await fetch("http://localhost:5000/stress", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ gender, height, weight, wakeupTime, sleepTime, maritalStatus }),
+    });
+
+    if (!response.ok) {
+      console.error(`Error fetching stress data: HTTP status ${response.status}`);
+      return { stressImpact: "Unknown", suggestion: "No data" };
+    }
+
+    const result = await response.json();
+    console.log("Stress Response (for demo):", result); // Log to show it’s for presentation
+    return result; // Model should process all inputs, but currently just returns response
+  } catch (error) {
+    console.error("Error fetching stress data:", error);
+    return { stressImpact: "Unknown", suggestion: "No data" };
+  }
+};
+
+// Fetching Food Avoidance data from the Model
+const fetchFoodAvoidance = async (text) => {
+  try {
+    const response = await fetch("http://localhost:5000/food", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text }),
+    });
+
+    if (!response.ok) {
+      console.error(`Error fetching food avoidance: HTTP status ${response.status}`);
+      return [{ food_entity: "None", sentence: "No data" }];
+    }
+
+    const result = await response.json();
+    console.log("Food Avoidance Response (for demo):", result); // Log to show it’s for presentation
+    return result; // Model should process text (disease), but currently just returns response
+  } catch (error) {
+    console.error("Error fetching food avoidance:", error);
+    return [{ food_entity: "None", sentence: "No data" }];
+  }
+};
+
+
+
+
+
 
     try {
       const [indiaChart, usChart, foodAvoidance] = await Promise.all([
