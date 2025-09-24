@@ -1,12 +1,12 @@
 import React from "react";
 import Hero from "../components/Hero";
-import Interduce from "../components/Interduce";
+import About from "../components/About";
 
 function Home() {
   return (
     <div>
       <Hero />
-      <Interduce />
+      <About />
     </div>
   );
 }

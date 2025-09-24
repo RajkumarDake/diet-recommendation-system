@@ -1,7 +1,7 @@
 // Type.js
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import FormComponent from "./Form";
+import ComprehensiveForm from "./ComprehensiveForm";
 import Display from "./Display";
 
 function Type() {
@@ -192,49 +192,69 @@ const fetchFoodAvoidance = async (text) => {
         <button
           style={{
             padding: "20px 40px",
-            backgroundColor: "white",
-            color: "lightgreen",
-            height: "60px",
-            borderRadius: "20px",
+            background: "linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%)",
+            color: "white",
+            height: "70px",
+            borderRadius: "25px",
             fontSize: "16px",
-            fontWeight: 900,
+            fontWeight: 700,
             cursor: "pointer",
-            boxShadow: "-6px -6px 6px black",
-            transition: "0.5s",
+            boxShadow: "0 10px 25px rgba(245, 158, 11, 0.3)",
+            transition: "all 0.3s ease",
             border: "none",
             outline: "none",
+            minWidth: "120px",
+            textAlign: "center",
+            letterSpacing: "0.5px"
           }}
           onClick={handleTipsClick}
-          onMouseEnter={(e) => (e.target.style.boxShadow = "none")}
-          onMouseLeave={(e) =>
-            (e.target.style.boxShadow = "-6px -6px 6px black")
-          }
+          onMouseEnter={(e) => {
+            e.target.style.transform = "translateY(-3px)";
+            e.target.style.boxShadow = "0 20px 40px rgba(245, 158, 11, 0.4)";
+            e.target.style.background = "linear-gradient(135deg, #d97706 0%, #b45309 50%, #92400e 100%)";
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.transform = "translateY(0)";
+            e.target.style.boxShadow = "0 10px 25px rgba(245, 158, 11, 0.3)";
+            e.target.style.background = "linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%)";
+          }}
         >
           Tips
         </button>
         <button
           style={{
             padding: "20px 40px",
-            backgroundColor: "green",
+            background: "linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%)",
             color: "white",
-            height: "60px",
-            borderRadius: "20px",
-            fontSize: "16px",
-            fontWeight: 900,
+            height: "70px",
+            borderRadius: "25px",
+            fontSize: "14px",
+            fontWeight: 700,
             cursor: "pointer",
-            boxShadow: "-6px -6px 6px black",
-            transition: "0.5s",
+            boxShadow: "0 10px 25px rgba(16, 185, 129, 0.3)",
+            transition: "all 0.3s ease",
             border: "none",
             outline: "none",
-            marginLeft: "10px",
+            marginLeft: "15px",
+            minWidth: "300px",
+            textAlign: "center",
+            letterSpacing: "0.5px",
+            position: "relative",
+            overflow: "hidden"
           }}
           onClick={handleButton2Click}
-          onMouseEnter={(e) => (e.target.style.boxShadow = "none")}
-          onMouseLeave={(e) =>
-            (e.target.style.boxShadow = "-6px -6px 6px black")
-          }
+          onMouseEnter={(e) => {
+            e.target.style.transform = "translateY(-3px)";
+            e.target.style.boxShadow = "0 20px 40px rgba(16, 185, 129, 0.4)";
+            e.target.style.background = "linear-gradient(135deg, #059669 0%, #047857 50%, #065f46 100%)";
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.transform = "translateY(0)";
+            e.target.style.boxShadow = "0 10px 25px rgba(16, 185, 129, 0.3)";
+            e.target.style.background = "linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%)";
+          }}
         >
-          Show Form
+          AI-Powered Personalized Nutrition Assessment
         </button>
       </div>
 
@@ -252,10 +272,22 @@ const fetchFoodAvoidance = async (text) => {
             }}
             onClick={() => setShowForm(false)}
           />
-          <FormComponent
-            onSubmit={handleFormSubmit}
-            onClose={() => setShowForm(false)}
-          />
+          <div
+            style={{
+              position: "fixed",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              zIndex: 999,
+              maxWidth: "90vw",
+              maxHeight: "90vh",
+              overflow: "auto",
+              borderRadius: "15px",
+              boxShadow: "0 25px 50px rgba(0, 0, 0, 0.3)"
+            }}
+          >
+            <ComprehensiveForm />
+          </div>
         </>
       )}
 

@@ -10,7 +10,7 @@ function Hero() {
       <div className="w-full lg:w-1/2 h-1/2 lg:h-full flex items-center justify-center flex-col mt-10">
         <div className=" flex gap-5 items-center lg:items-start justify-center flex-col">
           <h3 className="flex text-white text-4xl gap-2 mx-20 font-bold">
-            Hi There!
+            AI-Powered Nutrition
             <span>
               <img
                 src="https://media.tenor.com/SNL9_xhZl9oAAAAi/waving-hand-joypixels.gif"
@@ -21,8 +21,7 @@ function Hero() {
           </h3>
           
           <span className="flex text-white lg:text-xl mx-20  gap-2 font-bold justify-center items-center">
-
-          Good health starts with a balanced diet and an active lifestyle. Eat plenty of fruits, vegetables, lean proteins, and whole grains. Stay hydrated, exercise regularly, and listen to your body. Ready for personalized diet tips? Fill out the form and get started on your health journey today!
+          Experience the future of personalized nutrition with our advanced AI system. Using LSTM neural networks for health analysis, Transformer models for genomic insights, and fusion algorithms for comprehensive recommendations. Get personalized nutrition plans based on your genetics, health metrics, and mental wellness data.
           </span>
         <span>
             <Type />

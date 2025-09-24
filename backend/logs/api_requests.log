@@ -1,0 +1,18 @@
+2025-09-20 18:40:05,080 - api.routes.recommendations - INFO - recommendations.py:115 - Generating recommendations for user: user_1758373804730
+2025-09-20 18:40:05,080 - api.routes.recommendations - INFO - recommendations.py:115 - Generating recommendations for user: user_1758373804730
+2025-09-20 18:40:05,083 - api.routes.recommendations - ERROR - recommendations.py:177 - Error generating recommendations: 503: Fusion model not available. Please train models first.
+2025-09-20 18:40:05,083 - api.routes.recommendations - ERROR - recommendations.py:177 - Error generating recommendations: 503: Fusion model not available. Please train models first.
+2025-09-20 20:11:02,842 - api.routes.recommendations - INFO - recommendations.py:115 - Generating recommendations for user: user_1758379262486
+2025-09-20 20:11:02,842 - api.routes.recommendations - INFO - recommendations.py:115 - Generating recommendations for user: user_1758379262486
+2025-09-20 20:11:02,845 - api.routes.recommendations - ERROR - recommendations.py:177 - Error generating recommendations: 503: Fusion model not available. Please train models first.
+2025-09-20 20:11:02,845 - api.routes.recommendations - ERROR - recommendations.py:177 - Error generating recommendations: 503: Fusion model not available. Please train models first.
+2025-09-20 21:03:10,556 - api.routes.recommendations - INFO - recommendations.py:115 - Generating recommendations for user: user_1758382390214
+2025-09-20 21:03:10,556 - api.routes.recommendations - INFO - recommendations.py:115 - Generating recommendations for user: user_1758382390214
+2025-09-20 21:03:10,558 - api.routes.recommendations - ERROR - recommendations.py:181 - Error generating recommendations: 503: LSTM model not trained. Please run training first.
+2025-09-20 21:03:10,558 - api.routes.recommendations - ERROR - recommendations.py:181 - Error generating recommendations: 503: LSTM model not trained. Please run training first.
+2025-09-25 03:06:38,485 - api.routes.recommendations - INFO - recommendations.py:117 - Generating recommendations for user: user_1758749798127
+2025-09-25 03:06:38,485 - api.routes.recommendations - INFO - recommendations.py:117 - Generating recommendations for user: user_1758749798127
+2025-09-25 03:06:38,489 - api.routes.recommendations - INFO - recommendations.py:132 - Running in demo mode with simulated predictions
+2025-09-25 03:06:38,489 - api.routes.recommendations - INFO - recommendations.py:132 - Running in demo mode with simulated predictions
+2025-09-25 03:06:38,569 - api.routes.recommendations - INFO - recommendations.py:180 - Recommendations generated successfully for user: user_1758749798127
+2025-09-25 03:06:38,569 - api.routes.recommendations - INFO - recommendations.py:180 - Recommendations generated successfully for user: user_1758749798127
